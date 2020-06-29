@@ -1,0 +1,74 @@
+.button-wallet {
+  padding: 20px;
+  background: none;
+  border: none;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  z-index: 999;
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    background-color: #101d42;
+    .fa-wallet path {
+      fill: #ffffff;
+    }
+  }
+
+  .fa-wallet {
+    width: 25px;
+  }
+
+  .fa-wallet path {
+    fill: #101d42;
+    transition: all 0.2s ease;
+  }
+}
+
+.button-wallet.active {
+  background: none;
+  .fa-wallet path {
+    fill: #ffffff;
+  }
+}
+
+.fullscreen-modal {
+  display: none;
+  width: 65px;
+  height: 65px;
+  background-color: #101d42;
+  border-radius: 50%;
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+}
+
+.fullscreen-modal.active {
+  display: block;
+  background-color: #101d42;
+  width: 100%;
+  height: 100vh;
+  animation: expand 0.5s ease forwards;
+}
+
+@keyframes expand {
+  0% {
+    width: 65px;
+    height: 65px;
+    right: 30px;
+    bottom: 30px;
+    border-radius: 50%;
+  }
+  100% {
+    border-radius: 0;
+    width: 100vw;
+    height: 100vh;
+    bottom: 0;
+    right: 0;
+  }
+}

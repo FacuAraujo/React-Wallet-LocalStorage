@@ -1,0 +1,312 @@
+.animate-slideUp {
+  animation: slideUp 0.2s ease;
+  @keyframes slideUp {
+    0% {
+      opacity: 0;
+      transform: translateY(5px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+.flip-container {
+  perspective: 1000px;
+  position: relative;
+  width: 270px;
+}
+
+.card-data {
+  color: white;
+}
+
+.credit-card {
+  width: 270px;
+  height: 167px;
+  margin-top: 22px;
+  position: relative;
+  border-radius: 15px;
+
+  .card-front,
+  .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    backface-visibility: hidden;
+    transform: perspective(600px);
+    transition: transform 0.6s ease-out;
+    box-shadow: 0 3px 20px 0 rgba(#0d1317, 0.16);
+  }
+
+  .card-front {
+    transform: rotateY(0deg);
+    background: #232ed1;
+    overflow: hidden;
+
+    &:after {
+      content: '';
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      background: url(../../assets/img/puntos.png) center center;
+      background-size: 540px 320px;
+      z-index: -1;
+      opacity: 0.15;
+    }
+
+    .visa-logo {
+      position: absolute;
+      right: 27px;
+      top: 22px;
+
+      img {
+        width: 55px;
+      }
+    }
+
+    .data-number {
+      .single-number {
+        display: inline-block;
+        width: 8px;
+        margin-right: 0.5px;
+        line-height: 16px;
+        font-size: 13px;
+        color: #fff;
+      }
+
+      .single-number:nth-child(4n) {
+        margin-right: 19px;
+      }
+
+      .single-number:last-of-type {
+        margin-right: 0;
+      }
+    }
+
+    .data-date {
+      position: absolute;
+      right: 27px;
+      bottom: 22px;
+      font-size: 7px;
+      color: #cecece;
+      text-transform: uppercase;
+
+      .card-date .date {
+        display: block;
+        font-size: 11px;
+        color: #fff;
+      }
+    }
+
+    .data-name {
+      position: absolute;
+      left: 27px;
+      bottom: 22px;
+      width: 65%;
+      overflow: hidden;
+      font-size: 7px;
+      color: #cecece;
+      text-transform: uppercase;
+
+      .card-data {
+        display: inline-block;
+        font-size: 11px;
+        text-transform: capitalize;
+      }
+
+      .name {
+        margin-right: 0.5em;
+      }
+    }
+  }
+
+  .card-back {
+    background: #1e28af;
+    overflow: hidden;
+    transform: rotateY(180deg);
+
+    &:after {
+      content: '';
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      background: url(../../assets/img/puntos.png) center center;
+      background-size: 540px 320px;
+      z-index: -1;
+      opacity: 0.15;
+      transform: rotateY(180deg);
+    }
+
+    .magnetic-bar {
+      height: 30px;
+      width: 100%;
+      position: absolute;
+      top: 30px;
+      background: #2e2e2e;
+    }
+
+    .back-info {
+      width: 100%;
+      position: relative;
+
+      .white-bar {
+        width: 60%;
+        height: 30px;
+        background: #eef2fb;
+        position: absolute;
+        left: 22px;
+      }
+
+      .data-cvv {
+        position: absolute;
+        right: 32px;
+        margin-top: 5px;
+
+        .label {
+          font-size: 7px;
+          color: #cecece;
+        }
+
+        .single-cvv {
+          display: inline-block;
+          font-size: 11px;
+          width: 7px;
+          margin-right: 2px;
+        }
+      }
+    }
+
+    .visa-logo-back {
+      position: absolute;
+      left: 22px;
+      bottom: 22px;
+      opacity: 0.25;
+      img {
+        width: 55px;
+      }
+    }
+  }
+}
+
+.card-flip {
+  .card-front {
+    transform: rotateY(-180deg);
+  }
+  .card-back {
+    transform: rotateY(0deg);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .flip-container {
+    width: 400px;
+  }
+
+  .credit-card {
+    width: 400px;
+    height: 247px;
+    margin-top: 121px;
+
+    .card-front {
+      &:after {
+        background-size: 800px 470px;
+      }
+
+      .visa-logo {
+        position: absolute;
+        right: 40px;
+        top: 32px;
+
+        img {
+          width: 82px;
+        }
+      }
+
+      .data-number {
+        .single-number {
+          width: 14px;
+          margin-right: 0.5px;
+          line-height: 25px;
+          font-size: 21px;
+        }
+
+        .single-number:nth-child(4n) {
+          margin-right: 24px;
+        }
+
+        .single-number:last-of-type {
+          margin-right: 0;
+        }
+      }
+
+      .data-date {
+        right: 40px;
+        bottom: 26px;
+        font-size: 10px;
+
+        .card-date .date {
+          font-size: 14px;
+        }
+      }
+
+      .data-name {
+        left: 40px;
+        bottom: 26px;
+        font-size: 10px;
+
+        .card-data {
+          font-size: 14px;
+        }
+      }
+    }
+
+    .card-back {
+      &:after {
+        background-size: 540px 320px;
+      }
+
+      .magnetic-bar {
+        height: 50px;
+        top: 40px;
+      }
+
+      .back-info {
+        .white-bar {
+          width: 60%;
+          height: 40px;
+          left: 40px;
+        }
+
+        .data-cvv {
+          right: 40px;
+
+          .label {
+            font-size: 10px;
+            color: #cecece;
+          }
+
+          .single-cvv {
+            font-size: 14px;
+            width: 12px;
+            margin-right: 1px;
+          }
+        }
+      }
+
+      .visa-logo-back {
+        left: 40px;
+        bottom: 26px;
+        img {
+          width: 70px;
+        }
+      }
+    }
+  }
+}
