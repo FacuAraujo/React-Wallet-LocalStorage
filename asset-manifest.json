@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/react-wallet-localStorage/static/css/main.1e1cb348.chunk.css",
+    "main.js": "/react-wallet-localStorage/static/js/main.02aa938e.chunk.js",
+    "main.js.map": "/react-wallet-localStorage/static/js/main.02aa938e.chunk.js.map",
+    "runtime-main.js": "/react-wallet-localStorage/static/js/runtime-main.d06fb16a.js",
+    "runtime-main.js.map": "/react-wallet-localStorage/static/js/runtime-main.d06fb16a.js.map",
+    "static/css/2.0cee8fd6.chunk.css": "/react-wallet-localStorage/static/css/2.0cee8fd6.chunk.css",
+    "static/js/2.246be451.chunk.js": "/react-wallet-localStorage/static/js/2.246be451.chunk.js",
+    "static/js/2.246be451.chunk.js.map": "/react-wallet-localStorage/static/js/2.246be451.chunk.js.map",
+    "index.html": "/react-wallet-localStorage/index.html",
+    "precache-manifest.df43a5207ac38e78de38aec72101376f.js": "/react-wallet-localStorage/precache-manifest.df43a5207ac38e78de38aec72101376f.js",
+    "service-worker.js": "/react-wallet-localStorage/service-worker.js",
+    "static/css/2.0cee8fd6.chunk.css.map": "/react-wallet-localStorage/static/css/2.0cee8fd6.chunk.css.map",
+    "static/css/main.1e1cb348.chunk.css.map": "/react-wallet-localStorage/static/css/main.1e1cb348.chunk.css.map",
+    "static/js/2.246be451.chunk.js.LICENSE.txt": "/react-wallet-localStorage/static/js/2.246be451.chunk.js.LICENSE.txt",
+    "static/media/visa-logo.svg": "/react-wallet-localStorage/static/media/visa-logo.036ce7ca.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d06fb16a.js",
+    "static/css/2.0cee8fd6.chunk.css",
+    "static/js/2.246be451.chunk.js",
+    "static/css/main.1e1cb348.chunk.css",
+    "static/js/main.02aa938e.chunk.js"
+  ]
+}
